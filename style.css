@@ -1,0 +1,196 @@
+body{
+    overflow-y: scroll;
+}
+.glogin {
+    padding: 6px 0 !important;
+}
+
+/*override materialize*/
+.tabs .tab a.active,
+.tabs .tab a.active:focus {
+    background: #00808026;
+}
+.tabs li.indicator{
+    background-color: teal;
+    height: 5px;
+}
+progress {
+    width: 100%;
+}
+label {
+    font-size: 1em;
+    color: teal;
+}
+a {
+    color: #0077b1;
+    font-weight: 600;
+}
+a[target] {
+    
+    display: inline-block;
+    padding: 0 4px;
+    color:#0055dd;
+}
+a[target]:hover{
+    background-color:#a8d4fb;
+    text-decoration: underline;
+}
+fieldset {
+    margin: 1.5em 0;
+}
+#mf fieldset.row > h6 {
+    padding: 0.5em;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+input[type="date"]{
+    max-width: 180px;
+}
+.card-row{
+    margin: 0 auto;
+}
+/*end override */
+input#fund-progress {
+    display: inline-block;
+    width: 36px;
+    text-align: center;
+}
+body > .container {
+    margin-top: 20px;
+}
+/*loader */
+.loader {
+    height: 45px;
+    text-align:center;
+  }
+  .ball {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 11px;
+    margin: 0 5px;
+    animation: 1.5s bounce ease infinite;
+  }
+  .blue {
+    background-color: #4285F5;
+  }
+  .red {
+    background-color: #EA4436;
+    animation-delay: .25s;
+  } 
+  .yellow {
+    background-color: #FBBD06;
+    animation-delay: .5s;
+  }
+  .green {
+    background-color: #34A952;
+    animation-delay: .75s;
+  }
+  @keyframes bounce {  
+      50% {
+          transform: translateY(25px);
+      }
+  }
+/*end loader */
+div#exams-wrapper {
+    padding: 40px;
+    margin-top: 20px;
+}
+.exam-attempt input,.exam-attempt select {
+    background-color: #fff !important;
+    padding: 0 4px !important;
+    line-height: 2em !important;
+    height: 2em !important;
+}
+.exam-field-box.input-field,
+.exam-field-box.input-field p 
+{
+    margin: 0;
+}
+#user_info img {
+    height: 48px;
+    border-radius: 50%;
+    padding: 4px;
+    vertical-align: middle;
+}
+.edit-save-btn {
+    vertical-align: middle;
+}
+nav .edit-save-btn i.material-icons {
+    line-height: inherit;
+    height: auto;
+}
+/* tutorials tab*/
+#units_wrapper {
+    margin-left: 2em;
+  }
+#units_wrapper li {
+    padding-left: 1em;
+    padding-bottom: 1em;
+    position: relative;
+  }
+#units_wrapper li:not(:last-of-type)::before  {
+    content: "";
+    position: absolute;
+    height: 129%;
+    border-left: 4px solid #008080;
+    left: -0.3em;
+    top: 0;
+}
+#units_wrapper li::after{
+    content: "";
+    width: 1.3em;
+    height: 1.3em;
+    background: #fff;
+    border: 2px solid #008080;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: -0.8em;
+  }
+  .act-btn{
+      position: fixed;
+      right: 16px;
+      bottom: 16px;
+  }
+  input.invalid,
+  select.invalid,
+  input.datepicker.invalid{
+    border-width: 0 0 2px 0;
+    border-color:#f44336 !important;
+    border-style: solid;
+    background-color: #ffd5d5 !important;
+    position: relative;
+  }
+  input.exam_date.invalid:after{
+    content: "Invalid Date. Cannot be empty or a future date";
+    position: absolute;
+    left: -57px;
+    top: -23px;
+    display: inline-block;
+    line-height: 1.5em;
+    background-color: #000000;
+    border: 1px solid #f44336;
+    font-size: 12px;
+    color: #ffb9b9;
+    width: 248px;
+    z-index: 9;
+    padding: 0 4px;
+    box-shadow: 0 0 4px black;
+  }
+  input.cert_url.invalid::after{
+    content: "Invalid Certificate Link";
+    position: absolute;
+    left: -57px;
+    top: -23px;
+    display: inline-block;
+    line-height: 1.5em;
+    background-color: #000000;
+    border: 1px solid #f44336;
+    font-size: 12px;
+    color: #ffb9b9;
+    width: 248px;
+    z-index: 9;
+    padding: 0 4px;
+    box-shadow: 0 0 4px black;
+  }

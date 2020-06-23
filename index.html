@@ -1,0 +1,80 @@
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="icon" href="favicon.ico">
+    <title>GCE Profile</title>
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="857978230860-jr8m1bqnl5lr2b1kqlb1i84np6cbamds.apps.googleusercontent.com">
+    <link rel="stylesheet" href="./materialize/css/materialize.css">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="./materialize/js/materialize.min.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+  </head>
+  <body>
+    <div class="navbar-fixed">
+      <nav class="nav-extended row white">
+        <div class="nav-wrapper col s3">
+          <a href="#" class="brand-logo"><img src="./geg-logo-s-wide.png" height="48"></a>
+        </div>
+        <div class="nav-content col s6">
+          <ul id="tabs-swipe" class="tabs">
+            <li class="tab"><a class="active teal-text waves-effect waves-teal" href="#tab1">My Profile</a></li>
+            <li class="tab hide"><a class="teal-text waves-effect waves-teal" href="#tab2">Tutorial</a></li>
+          </ul>
+        </div>
+        <div class="glogin col s3"></div>
+      </nav>
+    </div>
+    <div class="container" id="main">
+      <div id="tab1" class="row profile">
+          <style>.g-signin2>div{margin: auto};</style>
+          <div class="g-signin2" data-width="240" data-height="50" data-onsuccess="onSignIn" data-prompt="select_account" data-ux_mode="popup" data-theme="dark"></div>
+      </div>
+      <div id="tab2" class="row s12 tutorial hide">
+        <ul class="collapsible expandable" id="tut_panel1">
+          <li>
+            <div class="collapsible-header"><b>What is the Purpose of these Tutorials</b></div>
+            <div class="collapsible-body"><span>By reading, watching videos, and doing activities, you'll learn how to integrate Google in your classroom.<br>By the end of this course, you'll be ready to take the exam to become a Google Certified Educator Level 1.</span></div>
+          </li>
+          <li>
+            <div class="collapsible-header"><b>How Do I Get Started</b></div>
+            <div class="collapsible-body"><span>In order to complete the Acitivities in this training, you must work in groups of two or more participants.<br><b>You can form a small group of 2 to 5 teachers.</b> It can be from the same school or different schools. The lesson links are listed below in order. It is important that you complete all the lessons to ensure exam readiness.</span></div>
+          </li>
+          <li>
+            <div class="collapsible-header"><b>Tutorials Outline</b></div>
+            <div class="collapsible-body" id="tuts_outline"></div>
+          </li>
+        </ul>
+        <ul class="collapsible" id="tut_panel2">
+          <li>
+            <div class="collapsible-header">Tutorial #<i></i></div>
+            <div class="collapsible-body"></div>
+          </li>
+        </ul>
+        <div id="tutorial_section" class="col s12"></div>
+      </div>
+    </div>
+    <div id="toast" style="display: none; position: fixed;top:0; width: 100%; height: 100%; z-index: 99999; background: #000; opacity: 0.98;">
+      <p style="color: #fff;padding: 1em;margin: 2em;box-shadow: 0 0 4px 0 #ccc;"><span></span></p>
+    </div>
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <h6></h6>
+        <p></p>
+        <div class="loader" style="display: none; min-width: 200px !important;">
+          <i class="blue ball"></i>
+          <i class="red ball"></i>  
+          <i class="yellow ball"></i>  
+          <i class="green ball"></i>  
+        </div>
+      </div>
+      <div class="modal-footer" style="display: none;">
+        <button class="modal-close teal waves-effect waves-teal btn-flat">Close</button>
+      </div>
+    </div>
+    <script src="./template.js"></script>
+    <script src="./script.js"></script>
+    <p class="center-align"><i style="cursor: pointer;" onclick="showPrivacy();" class="grey-text text-lighten-1">Privacy Policy</i></p>
+  </body>
+</html>
