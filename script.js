@@ -95,7 +95,8 @@ function update_user_menu(google_user){
 function renderCheck(){
     console.log("render checking");
     if(window.geg_indicators && geg_user){
-        'schoolData' in window.localStorage ? render() : loadScript('./schools.js', render);
+        render();
+//         'schoolData' in window.localStorage ? render() : loadScript('./schools.js', render);
     } else {
         console.error("Some content not loaded properly");
     }
