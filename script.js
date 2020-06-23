@@ -34,7 +34,7 @@ function onSignIn(googleUser) {
             
                 update_user_menu(data);
                 renderCheck();
-                if(results[2].domains.includes(window.geg_user.hd)) loadScript('/tutorial.js');
+                if(results[2].domains.includes(window.geg_user.hd)) loadScript('./tutorial.js');
                 closeModal();
            }).catch((err) => {
                console.error(err)
@@ -95,7 +95,7 @@ function update_user_menu(google_user){
 function renderCheck(){
     console.log("render checking");
     if(window.geg_indicators && geg_user){
-        'schoolData' in window.localStorage ? render() : loadScript('/schools.js', render);
+        'schoolData' in window.localStorage ? render() : loadScript('./schools.js', render);
     } else {
         console.error("Some content not loaded properly");
     }
